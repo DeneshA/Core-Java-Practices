@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+  public static void main(String[] args) {
+    
+    int descNum,quto,i=1,j;
+    int binNum[] = new int[100];
+ 
+ Scanner io = new Scanner(System.in);
+ System.out.print("Decimal to Binary Conversion");
+ System.out.print("============================");
+ System.out.print("Enter a decimal number :");
+descNum = io.nextInt();
+ System.out.println("You entered " + descNum);
+ quto = descNum;
+ while(quto != 0){
+   binNum[i++] = quto%2;
+   quto = quto/2;
+ }
+  System.out.print("Binary number is: ");
+ for(j=i-1;j>0;j--)
+ {
+   System.out.print(binNum[j]);
+ }
+  System.out.print("\n ");
+}
+}
